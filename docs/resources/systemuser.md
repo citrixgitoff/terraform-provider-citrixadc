@@ -29,7 +29,12 @@ resource "citrixadc_systemuser" "tf_user" {
 * `logging` - (Optional) Users logging privilege. Possible values: [ ENABLED, DISABLED ]
 * `maxsession` - (Optional) 
 * `hashedpassword` - (Optional)
-* `cmdpolicybinding` - (Optional) A set of blocks binding systemcommandpolicies to the systemuser. See below for details.
+* `cmdpolicybinding` - (Optional) A set of blocks binding systemcommandpolicies to the systemuser. See below for details. (deprecates soon)
+
+
+!>
+[**DEPRECATED**] Please use `systemuser_systemcmdpolicy_binding` to bind `systemcmdpolicy` to `systemuser` insted of this resource. The support for binding `systemcmdpolicy` to `systemuser` in this resource will get deprecated soon.
+
 
 A `cmdpolicybinding` block can contain the following attributes
 
